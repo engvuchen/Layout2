@@ -1,0 +1,221 @@
+/*顶栏容器*/
+
+html,body{
+	margin:0px;
+	font-size:0px;
+}
+
+.header{
+	height:60px;
+	width:100%;
+	background-color:#333333;
+	color:white;
+}
+/*中央690px*/
+.header .header1{
+	position:relative;
+	width:960px;
+	height:100%;
+	margin:0 auto;
+	/*定宽块状元素水平居中方式*/
+}
+/*logo样式*/
+.header1 .logo{
+	margin-left:0px;
+	font-size:20px;
+	height:60px;	
+	display:table-cell;
+	vertical-align:middle;
+}
+/*其他网站平台样式*/
+.header1 .other{
+	position:absolute;
+	top:10px;
+	right:0px;
+	font-size:12px;
+}
+.other b{
+	font-style: normal;
+	font-weight: normal;
+	margin-right:5px;
+}
+
+/*banner样式*/
+.banner{
+	width:100%;
+	height:300px;
+	background-color:#66bb33;
+}
+/*数字标识貌似和Github那些的线是平行的*/
+.banner .banner1{
+	width:960px;
+	height:100%;
+	margin:0 auto;
+	font-size:10px;
+	/*背景颜色会被继承吗*/
+	/*会的*/
+	position:relative;
+	color:
+}
+.banner1 .number{
+	position: absolute;
+	bottom:18px;
+	right:0px;
+	height:25px;
+}
+
+/*具体的数字样式*/
+.number .number1{
+	display:inline-block;
+	text-align: center;
+	
+	width:15px;
+	height:25px;
+	margin-right:5px;
+	border:1px solid black;
+	background-color:rgba(255,255,255,0.7);
+}
+.number1 b{
+	line-height: 25px;
+}
+
+/*环绕标题的容器*/
+.title_box{
+	background-color:#fff;
+	height:100px;
+	border-bottom:1px solid rgb(238, 238, 238);
+	color:black;
+	/*font-size:15px;*/
+}
+
+.title_box .title_contain{
+	width:960px;
+	margin:auto;
+	height:100%;
+	position: relative;
+	
+}
+
+.title_box ul{
+	padding-left:0;
+	margin-top:0;
+	margin-bottom: 0px;
+	position:absolute;
+	bottom:0;
+	
+}
+.title_box li{
+	list-style-type:none;
+	width:80px;
+	height:30px;
+	text-align: center;
+	margin:0;
+	padding:0;
+	/*设置圆角
+	border:1px solid rgb(208, 208, 208);	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;*/
+	float:left;
+	/*float的排版严丝密封*/
+}
+
+/*.title_box li a{
+	text-decoration: none;
+	line-height: 30px;
+	font-size:20px;
+	不能设置百分比，line-height:100%，不继承自父元素
+}*/
+
+/*.title_box */.active_title{
+	z-index:1;
+	border-bottom:0px;
+	background:#fffae8;
+}
+
+/*一定是需要a标签的*/
+.title_box li a{
+	/*这是a标签填满容器的关键*/
+	display:inline-block;
+	width:100%;
+	text-decoration:none;
+	font-size:12px;
+	line-height: 30px;
+	background: #e5f1fb;
+	
+	border:1px solid rgb(208, 208, 208);	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+	color:#000;
+	/*不能设置百分比，line-height:100%，不继承自父元素*/
+}
+.title_box li a:focus,.title_box li a:hover{
+	background-color:#FFFFFF;
+	border-bottom: 0px;
+}
+.title_box li a:active{
+	background-color:#FFFFFF;
+	border-bottom: 0px;
+}
+
+/*文章块最外层*/
+.article_outside{
+	position: absolute;
+	height:620px;
+	width:100%;
+}
+
+.article_outside_top{
+	position: absolute;
+	height:620px;
+	width:100%;
+	z-index=1;
+}
+
+.article_box{
+	width:960px;
+	/*每一行flex布局的高度*/
+	height:200px;
+	font-size:30px;
+	/*文字水平居中*/
+	text-align: center;
+	background: #FFFFFF;
+	margin-top:20px;
+	/*元素相对于articlie_outside居中*/
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	/*position: absolute;*/
+	/*直接让这几个div排在一排会怎么样？*/
+	/*容器: width:960px; height:600x;*/
+	/*上下三个：width:190px*/
+	/*中间4个：width:142px*/
+}
+.article_box .article_contain{
+	height: 200px;
+	flex-basis: 300px;
+	margin-right:20px;d
+	/*font-size:30px;*/
+	/*文字居中*/
+	text-align: center;
+	border:1px solid rgb(208, 208, 208);
+}
+.article_contain b{
+	font-weight: normal;
+	/*文字垂直居中*/
+	line-height:200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

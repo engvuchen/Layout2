@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习2</title>
+		<link rel="stylesheet" type="text/css" href="./练习2.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header1">
+				<div class="logo">Logo</div>
+				<div class="other">
+					<div class="other1">
+					<b>Github</b>
+					<b>淘宝</b>
+					<b>京东</b></div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner1">
+				<div class="number">
+					<div class="number1"><b>1</b></div>
+					<div class="number1"><b>1</b></div>
+					<div class="number1"><b>1</b></div>
+					<div class="number1"><b>1</b></div>
+				</div>
+			</div>
+		</div>
+		<div class="title_box">
+			<div class="title_contain">
+				<ul>
+					<li><a>First</a></li>
+					<li><a>Second</a></li>
+					<li><<a>Third</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--设置一个最外层的div，以便操作-->
+		<div class="article_outside">
+		<div class="article_box">
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+			<div class="article_contain"><b>What</b></div>
+		</div>
+		</div>
+		
+		<div class="article_outside">
+		<div class="article_box">
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+			<div class="article_contain"><b>Why</b></div>
+		</div>
+		</div>
+		
+		<div class="article_outside">
+		<div class="article_box">
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+		</div>
+		<div class="article_box">
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+			<div class="article_contain"><b>Who</b></div>
+		</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+			//获得所有的a标签
+			var tabs=document.querySelectorAll('.title_contain li a');
+			//获得所有文章块
+			var article=document.querySelectorAll('.article-outside');
+			
+			//遍历所有标题
+			for(i=0;i<tabs.length;i++)
+			{
+				//获得每一个标题对象
+				var tab=tabs[i];
+				//传入每一个标题对象和他在数组的位置
+				setTabHandler(tab,i);
+			}
+			
+			function setTabHandler(tab,tabPos){
+				//设置点击监视器，选中被点击的标题
+				tab.onclick=function(){
+					//清除所有标题的样式
+					for(i=0;i<tabs.length;i++){
+						tabs[i].className='';
+					}
+					
+					tab.className='active_title';
+					
+					for(i=0;i<article.length;i++){
+						//清除所有文章块的样式
+						acticle[i].className='';
+					}
+					//tabs是选中的标题在数组的序号，对应在HTML中排序的文章块级
+					article[tabPos].className='article_outside_top';
+				}
+			}
+		</script>
+	</body>
+</html>
